@@ -164,13 +164,12 @@ POST http://127.0.0.1:8000/api/patients/
 }
 ```
 
-4. Patient APIs
+4. Patient read/update APIs
 
 ```text
 GET    http://127.0.0.1:8000/api/patients/
 GET    http://127.0.0.1:8000/api/patients/1/
 PUT    http://127.0.0.1:8000/api/patients/1/
-DELETE http://127.0.0.1:8000/api/patients/1/
 ```
 
 PUT body:
@@ -201,13 +200,12 @@ POST http://127.0.0.1:8000/api/doctors/
 }
 ```
 
-6. Doctor APIs
+6. Doctor read/update APIs
 
 ```text
 GET    http://127.0.0.1:8000/api/doctors/
 GET    http://127.0.0.1:8000/api/doctors/1/
 PUT    http://127.0.0.1:8000/api/doctors/1/
-DELETE http://127.0.0.1:8000/api/doctors/1/
 ```
 
 PUT body:
@@ -242,6 +240,13 @@ POST body:
 ```
 
 For `GET /api/mappings/1/`, `1` is the `patient_id`. For `DELETE /api/mappings/1/`, `1` is the mapping ID.
+
+8. Delete patient or doctor after mapping tests
+
+```text
+DELETE http://127.0.0.1:8000/api/patients/1/
+DELETE http://127.0.0.1:8000/api/doctors/1/
+```
 
 ## Tests
 
